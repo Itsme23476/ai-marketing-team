@@ -1,0 +1,26 @@
+# Generated marketing deliverables (these are user output, not part of the tool)
+MARKETING-AUDIT.md
+MARKETING-PLAN.md
+MARKETING-REPORT.md
+MARKETING-REPORT.pdf
+COMPETITOR-REPORT.md
+COPY-SUGGESTIONS.md
+BRAND-VOICE.md
+LANDING-CRO.md
+EMAIL-SEQUENCES.md
+SOCIAL-CALENDAR.md
+AD-CAMPAIGNS.md
+FUNNEL-ANALYSIS.md
+LAUNCH-PLAYBOOK.md
+CLIENT-PROPOSAL.md
+SEO-AUDIT.md
+
+# A user's own filled-in brand brief should not be committed
+marketing/brand-brief.md
+
+# OS / editor cruft
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
