@@ -39,6 +39,7 @@ The generator reads a JSON file with this structure (six categories matching `sc
   "url": "https://example.com",
   "date": "June 18, 2026",
   "brand_name": "Example Co",
+  "brand_colors": {"primary": "#1B2A4A", "accent": "#2D5BFF"},
   "overall_score": 62,
   "executive_summary": "2–4 sentences: marketing health, top finding, recommended first step. State impact as a labeled range, never an invented dollar figure.",
   "categories": {
@@ -65,6 +66,14 @@ The generator reads a JSON file with this structure (six categories matching `sc
 ```
 
 Guidance:
+- `brand_colors` — **make the report match the brand.** Use the brand brief's colors if set.
+  Otherwise extract them from the live site: check the `<meta name="theme-color">` tag, the
+  web-app manifest, or the most-used non-neutral hex values in the site's CSS, e.g.
+  `curl -fsSL <url> | grep -oiE '#[0-9a-fA-F]{6}' | sort | uniq -c | sort -rn | head`.
+  Pick `primary` (a dark/brand base, used for header bars) and `accent` (the signature color,
+  used for headings, bars, and the cover stripe). `highlight` is optional. The generator keeps
+  the green/amber/red score colors fixed for readability and brands everything else. Omit the
+  key to use the neutral default palette.
 - `overall_score` = weighted composite from `scoring.md`. Round to a whole number.
 - `findings`: 5–10, ordered most→least severe; specific and quantified, quote real copy.
 - `quick_wins` / `medium_term` / `strategic` map to the recommendation tiers in `scoring.md`.
