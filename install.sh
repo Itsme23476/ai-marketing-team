@@ -10,7 +10,7 @@ GREEN='\033[0;32m'; YELLOW='\033[1;33m'; BLUE='\033[0;34m'; CYAN='\033[0;36m'; R
 echo ""
 echo -e "${CYAN}╔════════════════════════════════════════════════╗${NC}"
 echo -e "${CYAN}║        AI Marketing Team — for Claude Code       ║${NC}"
-echo -e "${CYAN}║   15 skills · 7 specialists · /market command    ║${NC}"
+echo -e "${CYAN}║   16 commands · 7 specialists · /market          ║${NC}"
 echo -e "${CYAN}╚════════════════════════════════════════════════╝${NC}"
 echo ""
 

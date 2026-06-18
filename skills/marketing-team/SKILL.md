@@ -54,36 +54,10 @@ When a command maps to one specialist, dispatch that subagent. When it needs sev
 | `/market report <url>` | cmo-strategist (compiles all) | MARKETING-REPORT.md |
 | `/market report-pdf <url>` | cmo-strategist → PDF script | MARKETING-REPORT.pdf |
 
-For each command, the detailed instructions live in `skills/market-<command>/SKILL.md`. Read
-the matching skill and follow it. The skills inherit the playbook rules automatically.
-
-## The flagship: `/market standup`
-
-This is the "full marketing team in one command" moment. It simulates a real team standup
-producing a unified 90-day marketing plan.
-
-1. Load brand brief (or offer to create one — playbook Rule 1).
-2. If a URL is available (from the brief or the argument), fetch it and run
-   `analyze_page.py` for structured facts.
-3. Launch the team in parallel, each scoped to the brand brief:
-   - `cmo-strategist` → priorities, positioning, 90-day roadmap
-   - `seo-lead` → top organic opportunities (Tier-1 keyword data if available)
-   - `copywriter` → the 3 highest-leverage copy rewrites
-   - `performance-marketer` → funnel gaps + one paid-channel test
-   - `social-manager` → a 2-week content angle plan
-   - `email-marketer` → the one email sequence to build first
-   - `competitive-analyst` → where the brand wins/loses vs 2–3 rivals
-4. Synthesize into `MARKETING-PLAN.md`: an exec summary, each specialist's top 3, a single
-   prioritized 90-day action list (🔴/🟡/🟢), and the metric each action moves.
-5. Print a terminal "standup summary": one line per specialist + the #1 action overall.
-
-Keep it grounded: no fabricated metrics (playbook Rule 3), label data tiers (Rule 2).
-
-## Quick snapshot: `/market quick <url>`
-
-Do NOT launch subagents. Fetch the homepage, judge headline clarity, CTA strength, value
-prop, trust signals, and mobile readiness. Output a <30-line scorecard: top 3 wins, top 3
-fixes. Offer the full `/market audit` as the next step.
+For **every** command in the table — including `standup` and `quick` — the detailed
+instructions live in `skills/market-<command>/SKILL.md`. Read the matching skill and follow
+it. The skills inherit the playbook rules automatically. (`standup` → `skills/market-standup/`,
+the flagship full-team plan; `quick` → `skills/market-quick/`, the fast no-subagent snapshot.)
 
 ## Scoring
 
